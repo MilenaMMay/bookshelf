@@ -13,7 +13,7 @@ class ListEntry extends React.Component {
         <div>{this.props.date}</div>
       </td>
       <td>
-        <a href='#' onClick={this.props.deleteHandler}>
+        <a href='#' onClick={(e) => { e.preventDefault(); this.props.deleteHandler() }}>
           <FontAwesomeIcon icon={faTrashAlt} size="xs">Delete</FontAwesomeIcon>
         </a>
       </td>
