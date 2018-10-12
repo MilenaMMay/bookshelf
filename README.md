@@ -1,3 +1,12 @@
+# Bookshelf
+
+## Pattern Library
+
+To view the Pattern Library, execute `yarn run storybook` and go to [http://localhost:9009/](http://localhost:9009/).
+
+
+---------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
