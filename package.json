@@ -6,7 +6,8 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
-    "storybook": "^1.0.0"
+    "storybook": "^1.0.0",
+    "styled-components": "^3.4.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,8 +27,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/react": "^3.4.11",
     "@storybook/addon-actions": "^3.4.11",
-    "@storybook/addon-links": "^3.4.11"
+    "@storybook/addon-links": "^3.4.11",
+    "@storybook/react": "^3.4.11"
   }
 }
