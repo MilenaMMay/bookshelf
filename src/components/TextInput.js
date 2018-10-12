@@ -11,7 +11,6 @@ class TextInput extends React.Component {
   }
 
   onChangeHandler(value) {
-    console.log(value)
     this.setState( { input: value } )
     this.props.inputHandler(value)
   }
@@ -26,7 +25,7 @@ class TextInput extends React.Component {
 
 TextInput.propTypes = {
   label: PropTypes.string,
-  inputHandler: PropTypes.func
+  inputHandler: PropTypes.func.isRequired
 };
 
 export default TextInput;

@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
+import PrimaryCommand from '../components/PrimaryCommand';
 import SecondaryCommand from '../components/SecondaryCommand';
 import PageTitle from '../components/PageTitle';
 import TextContent from '../components/TextContent';
@@ -13,9 +14,12 @@ import List from '../components/List';
 import ControlHeader from '../components/ControlHeader';
 
 import BookDetail from '../pages/BookDetail';
+import NewBook from '../pages/NewBook';
 import Books from '../pages/Books';
 
 storiesOf('components', module)
+
+  .add('PrimaryCommand', () => <PrimaryCommand>Foo</PrimaryCommand>)
 
   .add('SecondaryCommand', () => <SecondaryCommand>Foo</SecondaryCommand>)
 
@@ -87,5 +91,14 @@ storiesOf('pages', module)
   .add('BookDetail', () => <BookDetail
     title='Foo'
     details='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-  backUrl='/'
+    backUrl='/'
   />)
+
+  .add('NewBook', () => <NewBook
+    saveHandler={(title, details) => {
+      console.log('Title: ' + title);
+      console.log('Details: ' + details);
+    }}
+    backUrl='/'
+  />)
+
