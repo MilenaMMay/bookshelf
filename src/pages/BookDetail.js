@@ -10,7 +10,7 @@ class BookDetail extends React.Component {
       <div>
         <PageTitle>{this.props.title}</PageTitle>
         <TextContent>{this.props.details}</TextContent>
-        <SecondaryCommand>Back</SecondaryCommand>
+        <SecondaryCommand href={this.props.backUrl}>Back</SecondaryCommand>
       </div>
     );
   }
@@ -18,7 +18,8 @@ class BookDetail extends React.Component {
 
 BookDetail.propTypes = {
   title: PropTypes.string,
-  details: PropTypes.string
+  details: PropTypes.string,
+  backUrl: PropTypes.string
 };
 
 export default BookDetail
