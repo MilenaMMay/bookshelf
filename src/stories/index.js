@@ -9,7 +9,10 @@ import PageTitle from '../components/PageTitle';
 import TextContent from '../components/TextContent';
 import ListEntry from '../components/ListEntry';
 import List from '../components/List';
+import ControlHeader from '../components/ControlHeader';
+
 import BookDetail from '../pages/BookDetail';
+import Books from '../pages/Books';
 
 storiesOf('components', module)
 
@@ -40,12 +43,39 @@ storiesOf('components', module)
           url: '/',
           title: 'Bar bar - foo foo!',
           date: '11/12/2018'
-        },
+        }
       ]}
       deleteHandler={(id) => { console.log('delete: ' + id); } }
-    ></List>);
+    ></List>)
+
+  .add('ControlHeader', () => <ControlHeader addUrl='/'/>)
 
 
 storiesOf('pages', module)
+
+  .add('Books - empty content', () => <Books
+    books={null}
+    addBookUrl='/'
+    deleteHandler={(id) => { console.log('delete: ' + id); } }
+  />)
+
+  .add('Books - with content', () => <Books
+    books={[
+      {
+        id: 1,
+        url: '/',
+        title: 'Foo bar - bar foo!',
+        date: '10/12/2018'
+      },
+      {
+        id: 2,
+        url: '/',
+        title: 'Bar bar - foo foo!',
+        date: '11/12/2018'
+      }
+    ]}
+    addBookUrl='/'
+    deleteHandler={(id) => { console.log('delete: ' + id); } }
+  />)
 
   .add('BookDetail', () => <BookDetail title='Foo' details='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'></BookDetail>)
