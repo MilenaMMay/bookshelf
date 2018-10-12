@@ -7,6 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 import SecondaryCommand from '../components/SecondaryCommand';
 import PageTitle from '../components/PageTitle';
 import TextContent from '../components/TextContent';
+import TextInput from '../components/TextInput';
 import ListEntry from '../components/ListEntry';
 import List from '../components/List';
 import ControlHeader from '../components/ControlHeader';
@@ -21,6 +22,11 @@ storiesOf('components', module)
   .add('PageTitle', () => <PageTitle>Foo</PageTitle>)
 
   .add('TextContent', () => <TextContent>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</TextContent>)
+
+  .add('TextInput', () => <TextInput
+    label='Foo'
+    inputHandler={(value) => { console.log('Input: ' + value)}}
+  />)
 
   .add('ListEntry', () => <table><tbody><ListEntry
       id={10}
