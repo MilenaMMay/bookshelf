@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as specified in the snapshot 1`] = `
+<div>
+  <h1
+    className="sc-bdVaJa cQWkDZ"
+  >
+    Foo
+  </h1>
+  <p
+    className="sc-bwzfXH kDFfNT"
+  >
+    Foo bar lorem ipsum dolor foo bar.
+  </p>
+  <a
+    className="sc-htpNat kvAKSG"
+  >
+    Back
+  </a>
+</div>
+`;
