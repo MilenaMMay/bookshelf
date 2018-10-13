@@ -2,30 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import styled from 'styled-components'
+import designPrinciples from '../designPrinciples';
+import ColoredLink from './ColoredLink'
+
+const EntryLink = styled.a`
+  color: ${designPrinciples.colorDark};
+  font-family: ${designPrinciples.fontStandard};
+`
+
+const EntryRow = styled.tr`
+  &:nth-child(even) {
+    background-color: ${designPrinciples.colorLight};
+  }
+
+`
 
 class ListEntry extends React.Component {
   render() {
-    return <tr>
+    return <EntryRow>
       <td>
-        <a href={this.props.url}>{this.props.title}</a>
+        <EntryLink href={this.props.url}>{this.props.title}</EntryLink>
       </td>
       <td>
-        <div>{this.props.date}</div>
-      </td>
-      <td>
-        <a href='#' onClick={(e) => { e.preventDefault(); this.props.deleteHandler() }}>
+        <ColoredLink href='#' onClick={(e) => { e.preventDefault(); this.props.deleteHandler() }}>
           <FontAwesomeIcon icon={faTrashAlt} size="xs">Delete</FontAwesomeIcon>
-        </a>
+        </ColoredLink>
       </td>
-    </tr>
+    </EntryRow>
   }
 }
 
 ListEntry.propTypes = {
-  url: PropTypes.string,
-  title: PropTypes.string,
-  date: PropTypes.string,
-  deleteHandler: PropTypes.func
+  url: PropTypes.string.required,
+  title: PropTypes.string.required,
+  deleteHandler: PropTypes.func.required
 };
 
 export default ListEntry

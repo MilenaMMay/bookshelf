@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ListEntry from './ListEntry'
+import styled from 'styled-components'
+
+const ListTable = styled.table`
+  width: 100%;
+`
 
 class List extends React.Component {
   render() {
-    return <table>
+    return <ListTable>
       <tbody>
         { this.props.items.map((item) =>
           <ListEntry
@@ -15,7 +20,7 @@ class List extends React.Component {
           />
         )}
       </tbody>
-    </table>
+    </ListTable>
   }
 }
 

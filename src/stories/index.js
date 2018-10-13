@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
+import ColoredLink from '../components/ColoredLink';
 import PrimaryCommand from '../components/PrimaryCommand';
 import SecondaryCommand from '../components/SecondaryCommand';
 import PageTitle from '../components/PageTitle';
@@ -18,6 +19,8 @@ import NewBook from '../pages/NewBook';
 import Books from '../pages/Books';
 
 storiesOf('components', module)
+
+  .add('ColoredLink', () => <ColoredLink>Foo</ColoredLink>)
 
   .add('PrimaryCommand', () => <PrimaryCommand>Foo</PrimaryCommand>)
 

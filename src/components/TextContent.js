@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import designPrinciples from '../designPrinciples';
 
 const TextContent = styled.p`
-  color: #0f2142;
-  font-family:Graphik,Helvetica,Arial,sans-serif;
+  color: ${designPrinciples.colorDark};
+  font-family: ${designPrinciples.fontStandard};
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
