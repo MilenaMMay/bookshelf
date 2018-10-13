@@ -8,7 +8,7 @@ class Bookshelf extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      books: this.loadBooks()
+      books: this.sortBooks(this.loadBooks())
     }
 
     this.saveNewBookHandler = this.saveNewBookHandler.bind(this);
@@ -31,14 +31,16 @@ class Bookshelf extends React.Component {
   saveNewBookHandler(title, details) {
     const id = this.nextId()
     const newBook = { id, title, details, url: 'books/' + id }
-    this.setState({books: [ ...this.state.books, newBook]}, () => {
+    const books = this.sortBooks([ ...this.state.books, newBook])
+    this.setState({books}, () => {
       this.storeBooks(this.state.books)
       window.location.replace('/')
     })
   }
 
   deleteBookHandler(id) {
-    this.setState({books: this.state.books.filter(book => book.id !== id) }, () => {
+    const books = this.state.books.filter(book => book.id !== id)
+    this.setState({books}, () => {
       this.storeBooks(this.state.books)
     })
   }
@@ -50,6 +52,12 @@ class Bookshelf extends React.Component {
     } else {
       return Math.max(...ids) + 1
     }
+  }
+
+  sortBooks(books) {
+    return books.sort((a, b) => {
+      return a.title.localeCompare(b.title);
+    })
   }
 
   render() {
