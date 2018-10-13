@@ -29,7 +29,7 @@ class Bookshelf extends React.Component {
   }
 
   saveNewBookHandler(title, details) {
-    const id = 6
+    const id = this.nextId()
     const newBook = { id, title, details, url: 'books/' + id }
     this.setState({books: [ ...this.state.books, newBook]}, () => {
       this.storeBooks(this.state.books)
@@ -38,9 +38,18 @@ class Bookshelf extends React.Component {
   }
 
   deleteBookHandler(id) {
-    this.setState({books: this.state.books.filter(book => book.id != id) }, () => {
+    this.setState({books: this.state.books.filter(book => book.id !== id) }, () => {
       this.storeBooks(this.state.books)
     })
+  }
+
+  nextId() {
+    const ids = this.state.books.map(book => book.id)
+    if (ids.length === 0) {
+      return 0
+    } else {
+      return Math.max(...ids) + 1
+    }
   }
 
   render() {
@@ -60,7 +69,7 @@ class Bookshelf extends React.Component {
 
           <Route exact={true} path='/books/:bookId' render={({match}) => (
             <BookDetail
-              book={ this.state.books.find(book => book.id == match.params.bookId) }
+              book={ this.state.books.find(book => book.id === parseInt(match.params.bookId)) }
               backUrl='/'
             />
           )}/>

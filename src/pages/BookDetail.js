@@ -17,7 +17,7 @@ class BookDetail extends React.Component {
 }
 
 BookDetail.propTypes = {
-  book: PropTypes.obj,
+  book: PropTypes.object,
   backUrl: PropTypes.string
 };
 
