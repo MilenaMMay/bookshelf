@@ -30,18 +30,19 @@ class Bookshelf extends React.Component {
   }
 
   saveNewBookHandler(title, details) {
-    const nextId = 3
+    const id = 6
     console.log(this.state);
-    const newBook = { id: nextId, title, details, date: '' }
+    const newBook = { id, title, details, url: 'books/' + id }
     this.setState({books: [ ...this.state.books, newBook]}, () => {
-      console.log(this.state)
       this.storeBooks(this.state.books)
       window.location.replace('/')
     })
   }
 
   deleteBookHandler(id) {
-    console.log('delete: ' + id);
+    this.setState({books: this.state.books.filter(book => book.id != id) }, () => {
+      this.storeBooks(this.state.books)
+    })
   }
 
   render() {
