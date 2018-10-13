@@ -8,8 +8,8 @@ class BookDetail extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle>{this.props.title}</PageTitle>
-        <TextContent>{this.props.details}</TextContent>
+        <PageTitle>{this.props.book.title}</PageTitle>
+        <TextContent>{this.props.book.details}</TextContent>
         <SecondaryCommand href={this.props.backUrl}>Back</SecondaryCommand>
       </div>
     );
@@ -17,8 +17,7 @@ class BookDetail extends React.Component {
 }
 
 BookDetail.propTypes = {
-  title: PropTypes.string,
-  details: PropTypes.string,
+  book: PropTypes.obj,
   backUrl: PropTypes.string
 };
 
