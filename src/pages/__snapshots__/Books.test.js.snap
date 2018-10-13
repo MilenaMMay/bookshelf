@@ -3,12 +3,13 @@
 exports[`Books renders books as specified in the snapshot 1`] = `
 <div>
   <h1
-    className="sc-bdVaJa cQWkDZ"
+    className="sc-bdVaJa jykQSX"
   >
     Bookshelf
   </h1>
   <div>
     <a
+      className="sc-bwzfXH hmfeiN"
       href="/"
     >
       <svg
@@ -30,21 +31,24 @@ exports[`Books renders books as specified in the snapshot 1`] = `
     </a>
     <hr />
   </div>
-  <table>
+  <table
+    className="sc-ifAKCX kqqTha"
+  >
     <tbody>
-      <tr>
+      <tr
+        className="sc-bxivhb iRtWsk"
+      >
         <td>
           <a
+            className="sc-htpNat HCgVx"
             href="/book/10"
           >
             Ten
           </a>
         </td>
         <td>
-          <div />
-        </td>
-        <td>
           <a
+            className="sc-bwzfXH hmfeiN"
             href="#"
             onClick={[Function]}
           >
@@ -67,19 +71,20 @@ exports[`Books renders books as specified in the snapshot 1`] = `
           </a>
         </td>
       </tr>
-      <tr>
+      <tr
+        className="sc-bxivhb iRtWsk"
+      >
         <td>
           <a
+            className="sc-htpNat HCgVx"
             href="/book/20"
           >
             Twenty
           </a>
         </td>
         <td>
-          <div />
-        </td>
-        <td>
           <a
+            className="sc-bwzfXH hmfeiN"
             href="#"
             onClick={[Function]}
           >
@@ -110,12 +115,13 @@ exports[`Books renders books as specified in the snapshot 1`] = `
 exports[`Books renders empty content as specified in the snapshot 1`] = `
 <div>
   <h1
-    className="sc-bdVaJa cQWkDZ"
+    className="sc-bdVaJa jykQSX"
   >
     Bookshelf
   </h1>
   <div>
     <a
+      className="sc-bwzfXH hmfeiN"
       href="/"
     >
       <svg
@@ -138,7 +144,7 @@ exports[`Books renders empty content as specified in the snapshot 1`] = `
     <hr />
   </div>
   <p
-    className="sc-bwzfXH kDFfNT"
+    className="sc-EHOje dGRDrZ"
   >
     Please add a book to start!
   </p>

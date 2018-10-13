@@ -1,21 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List renders as specified in the snapshot 1`] = `
-<table>
+<table
+  className="sc-bxivhb jcNPuI"
+>
   <tbody>
-    <tr>
+    <tr
+      className="sc-htpNat fzkMAu"
+    >
       <td>
         <a
+          className="sc-bwzfXH iqVzjq"
           href="/item/10"
         >
           Ten
         </a>
       </td>
       <td>
-        <div />
-      </td>
-      <td>
         <a
+          className="sc-bdVaJa hXZFrn"
           href="#"
           onClick={[Function]}
         >
@@ -38,19 +41,20 @@ exports[`List renders as specified in the snapshot 1`] = `
         </a>
       </td>
     </tr>
-    <tr>
+    <tr
+      className="sc-htpNat fzkMAu"
+    >
       <td>
         <a
+          className="sc-bwzfXH iqVzjq"
           href="/item/20"
         >
           Twenty
         </a>
       </td>
       <td>
-        <div />
-      </td>
-      <td>
         <a
+          className="sc-bdVaJa hXZFrn"
           href="#"
           onClick={[Function]}
         >

@@ -3,12 +3,12 @@
 exports[`renders as specified in the snapshot 1`] = `
 <div>
   <h1
-    className="sc-bdVaJa cQWkDZ"
+    className="sc-bdVaJa jykQSX"
   >
     Foo
   </h1>
   <p
-    className="sc-bwzfXH kDFfNT"
+    className="sc-bwzfXH hDXrcm"
   >
     Foo bar lorem ipsum dolor foo bar.
   </p>

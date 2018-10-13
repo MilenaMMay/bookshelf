@@ -34,9 +34,9 @@ class ListEntry extends React.Component {
 }
 
 ListEntry.propTypes = {
-  url: PropTypes.string.required,
-  title: PropTypes.string.required,
-  deleteHandler: PropTypes.func.required
+  url: PropTypes.string,
+  title: PropTypes.string,
+  deleteHandler: PropTypes.func
 };
 
 export default ListEntry
