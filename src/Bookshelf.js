@@ -7,7 +7,6 @@ import Books from './pages/Books';
 class Bookshelf extends React.Component {
   constructor(props) {
     super(props)
-    console.log('init')
     this.state = {
       books: this.loadBooks()
     }
@@ -31,7 +30,6 @@ class Bookshelf extends React.Component {
 
   saveNewBookHandler(title, details) {
     const id = 6
-    console.log(this.state);
     const newBook = { id, title, details, url: 'books/' + id }
     this.setState({books: [ ...this.state.books, newBook]}, () => {
       this.storeBooks(this.state.books)
