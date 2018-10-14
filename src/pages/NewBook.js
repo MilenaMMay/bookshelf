@@ -34,9 +34,9 @@ class NewBook extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle>{this.props.title}</PageTitle>
-        <TextInput inputHandler={this.titleInputHandler}/>
-        <TextInput inputHandler={this.detailsInputHandler}/>
+        <PageTitle>Add a new book</PageTitle>
+        <TextInput label='Title' inputHandler={this.titleInputHandler}/>
+        <TextInput label='Details' inputHandler={this.detailsInputHandler}/>
         <SecondaryCommand href={this.props.backUrl}>cancel</SecondaryCommand>
         <PrimaryCommand onClick={(e) => { this.onClickHandler(e) }}>save</PrimaryCommand>
       </div>
